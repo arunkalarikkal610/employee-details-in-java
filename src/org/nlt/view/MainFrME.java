@@ -50,23 +50,23 @@ public class MainFrME extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         submitButton = new javax.swing.JButton();
         updateButton = new javax.swing.JButton();
-        deleteButton = new javax.swing.JButton();
-        resetButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         personTable = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Person Detail"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.setLayout(new java.awt.GridLayout(3, 2, 10, 20));
 
-        jLabel1.setText("Name");
+        jLabel1.setText("EMPLOYEE NAME");
         jPanel1.add(jLabel1);
         jPanel1.add(nameTextField);
 
-        jLabel2.setText("Age");
+        jLabel2.setText("EMPLOYEE AGE");
         jPanel1.add(jLabel2);
 
         ageTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class MainFrME extends javax.swing.JFrame {
         });
         jPanel1.add(ageTextField);
 
-        jLabel3.setText("Contact");
+        jLabel3.setText("EMPLOYEE ADDRESS");
         jPanel1.add(jLabel3);
         jPanel1.add(contactTextField);
 
@@ -99,22 +99,6 @@ public class MainFrME extends javax.swing.JFrame {
         });
         jPanel2.add(updateButton);
 
-        deleteButton.setText("Delete");
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
-            }
-        });
-        jPanel2.add(deleteButton);
-
-        resetButton.setText("Reset");
-        resetButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetButtonActionPerformed(evt);
-            }
-        });
-        jPanel2.add(resetButton);
-
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         personTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -135,17 +119,42 @@ public class MainFrME extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(personTable);
 
+        jPanel4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jPanel4.setToolTipText("RTY");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("RECORDED DETAILS");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 63, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 10, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,8 +166,7 @@ public class MainFrME extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +180,7 @@ public class MainFrME extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(646, 523));
+        setSize(new java.awt.Dimension(718, 525));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -238,29 +246,6 @@ public class MainFrME extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_updateButtonActionPerformed
 
-    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
-        resetData();
-    }//GEN-LAST:event_resetButtonActionPerformed
-
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        if (personId != 0) {
-            String name = nameTextField.getText();
-            int age = Integer.parseInt(ageTextField.getText());
-            String contact = contactTextField.getText();
-            try {
-                Statement smt = con.createStatement();
-                smt.execute("delete from persons where id=" + personId);
-                JOptionPane.showMessageDialog(this, "Record Deleted");
-                setPersonTableData();
-                resetData();
-                personId = 0;
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Cannot Delete Record");
-            }
-        }
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -299,17 +284,17 @@ public class MainFrME extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageTextField;
     private javax.swing.JTextField contactTextField;
-    private javax.swing.JButton deleteButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTable personTable;
-    private javax.swing.JButton resetButton;
     private javax.swing.JButton submitButton;
     private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
@@ -339,7 +324,7 @@ public class MainFrME extends javax.swing.JFrame {
                 data[rowIndex][3] = rs.getString(4);
                 rowIndex++;
             }
-            String[] cols = {"ID", "PERSON NAME", "AGE", "CONTACT"};
+            String[] cols = {"ID", "EMPLOYEE NAME", "EMPLOYEE AGE", "EMPLOYEE ADDRESS"};
             DefaultTableModel model = new DefaultTableModel(data, cols);
             personTable.setModel(model);
 
